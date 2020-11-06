@@ -1,9 +1,27 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>signup</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sign Up</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <form>
+    <img src="../../../assets/images/post_img.png" alt="" />
 
+    <ion-input
+      type="text"
+      name="contactNumber"
+      [formControl]="contactNumber"
+      placeholder="Mobile number"
+    ></ion-input>
+    <ion-button (click)="handleSignup()" expand="block" color="success"
+      >Send OTP</ion-button
+    ><br /><br />
+    <a style="margin-top: 100px" routerLink="/home/login"
+      >Already Registered Login
+    </a>
+  </form>
 </ion-content>
